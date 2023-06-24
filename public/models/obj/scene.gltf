@@ -1,0 +1,241 @@
+{
+  "accessors": [
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 576,
+      "max": [
+        30.011552810668945,
+        39.622772216796875,
+        18.942140579223633
+      ],
+      "min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 6912,
+      "componentType": 5126,
+      "count": 576,
+      "max": [
+        0.5773508548736572,
+        0.5773510336875916,
+        0.5773507356643677
+      ],
+      "min": [
+        -0.5773508548736572,
+        -0.5773513317108154,
+        -0.5773507952690125
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 1920,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 13824,
+      "componentType": 5126,
+      "count": 576,
+      "max": [
+        30.011552810668945,
+        39.622772216796875,
+        18.942140579223633
+      ],
+      "min": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 20736,
+      "componentType": 5126,
+      "count": 576,
+      "max": [
+        0.5773508548736572,
+        0.5773513317108154,
+        0.5773507952690125
+      ],
+      "min": [
+        -0.5773508548736572,
+        -0.5773510336875916,
+        -0.5773507356643677
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 7680,
+      "componentType": 5125,
+      "count": 1920,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "rudymnv (https://sketchfab.com/rudymnv)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/refraction-dream-36067475f92a4d058ecaec9b61ae9001",
+      "title": "refraction dream"
+    },
+    "generator": "Sketchfab-12.65.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 15360,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 27648,
+      "byteOffset": 15360,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 43008,
+      "uri": "scene.bin"
+    }
+  ],
+  "materials": [
+    {
+      "alphaMode": "BLEND",
+      "name": "material_0",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.33,
+          0.33,
+          0.33,
+          0.75
+        ],
+        "roughnessFactor": 0.24
+      }
+    },
+    {
+      "name": "material_1",
+      "pbrMetallicRoughness": {
+        "roughnessFactor": 0.0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Object_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0
+          },
+          "indices": 2,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Object_1",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 4,
+            "POSITION": 3
+          },
+          "indices": 5,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        0.06146732345223427,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.364848755175047e-17,
+        -0.06146732345223427,
+        0.0,
+        0.0,
+        0.06146732345223427,
+        1.364848755175047e-17,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -16.83160400390625,
+        -11.54103946685791,
+        -5.596279621124268,
+        1.0
+      ],
+      "name": "fcddc729708742ce8a58103c771c3d76.lwo.cleaner.gles"
+    },
+    {
+      "children": [
+        3,
+        4
+      ],
+      "name": "/sketchfab-data/processing/7123dcb1345e4b2dac164d13c2120791/preprocess/fcddc729708742ce8a58103c771c3d76.lwo"
+    },
+    {
+      "mesh": 0,
+      "name": "Object_3"
+    },
+    {
+      "mesh": 1,
+      "name": "Object_4"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}

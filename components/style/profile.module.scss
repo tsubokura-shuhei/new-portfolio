@@ -1,0 +1,52 @@
+// スマートフォン
+$mb: 767px;
+
+@mixin mobile {
+  @media screen and (max-width: $mb) {
+    @content;
+  }
+}
+
+.prosile {
+  font-size: 13px;
+  color: #000000;
+  h1 {
+    text-align: center;
+  }
+  .en {
+    color: #808080;
+  }
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @include mobile {
+      display: grid;
+    }
+    .image_inner {
+      display: grid;
+      width: fit-content;
+      padding: 0 20px;
+      @include mobile {
+        margin: auto;
+        margin-bottom: 30px;
+      }
+      p {
+        display: grid;
+        font-size: 24px;
+        span {
+          font-size: 16px;
+          color: #808080;
+        }
+      }
+    }
+    .text_inner {
+      width: fit-content;
+      padding: 0 20px;
+      p {
+        line-height: 1.6rem;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

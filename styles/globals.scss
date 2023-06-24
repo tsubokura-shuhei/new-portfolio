@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Noto Sans JP", sans-serif !important;
+}
+
+html,
+body,
+ul,
+li,
+p,
+a,
+nav {
+  padding: 0;
+  margin: 0;
+  font-family: "Sawarabi Gothic", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: #333;
+    background: white;
+  }
+}
+
+.swiper-pagination {
+  display: none;
+}
