@@ -60,8 +60,9 @@ export default function Post({ postData }) {
               loop={true}
               centeredSlides={true}
               slidesPerView={1.5}
+              speed={2000}
               autoplay={{
-                delay: 3000,
+                delay: 6000,
                 disableOnInteraction: false,
               }}
               coverflowEffect={{

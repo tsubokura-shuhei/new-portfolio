@@ -71,8 +71,9 @@ export default function PageDesign() {
           loop={true}
           centeredSlides={true}
           slidesPerView={"auto"}
+          speed={2000}
           autoplay={{
-            delay: 3000,
+            delay: 4000,
             disableOnInteraction: false,
           }}
           coverflowEffect={{
@@ -96,35 +97,33 @@ export default function PageDesign() {
         {/* マテリアルUI追加箇所▼ */}
         <Box className={styles.bnr_container}>
           <Box className={styles.bnr_inner}>
-            {ButtonList.map((item) => {
-              return (
-                <Box key={item} className={styles.button_container}>
-                  <Button
-                    onClick={() => onOpenDialog(item)}
-                    className={styles.button_inner}
-                  >
-                    <img src={`/images/design/${item}`} alt="" />
-                  </Button>
-                  <Modal
-                    open={item === selectedItem}
-                    onClose={onCloseDialog}
-                    aria-labelledby="modal-modal-title"
-                    aria-describedby="modal-modal-description"
-                  >
-                    <Box sx={style}>
-                      <Box sx={closeButtonStyle}>
-                        <IconButton onClick={onCloseDialog}>
-                          <CloseIcon />
-                        </IconButton>
-                      </Box>
-                      <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                        <img src={`/images/design/${item}`} alt="" />
-                      </Typography>
+            {ButtonList.map((item, index) => (
+              <Box key={index} className={styles.button_container}>
+                <Button
+                  onClick={() => onOpenDialog(item)}
+                  className={styles.button_inner}
+                >
+                  <img src={`/images/design/${item}`} alt="" />
+                </Button>
+                <Modal
+                  open={item === selectedItem}
+                  onClose={onCloseDialog}
+                  aria-labelledby="modal-modal-title"
+                  aria-describedby="modal-modal-description"
+                >
+                  <Box sx={style}>
+                    <Box sx={closeButtonStyle}>
+                      <IconButton onClick={onCloseDialog}>
+                        <CloseIcon />
+                      </IconButton>
                     </Box>
-                  </Modal>
-                </Box>
-              );
-            })}
+                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                      <img src={`/images/design/${item}`} alt="" />
+                    </Typography>
+                  </Box>
+                </Modal>
+              </Box>
+            ))}
           </Box>
         </Box>
         {/* マテリアルUI追加箇所▲ */}
