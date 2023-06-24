@@ -11,4 +11,29 @@
       margin: 0 auto;
     }
   }
+
+  //スライダー
+  .mySwiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 60px;
+  }
+
+  .swiperSliders {
+    background-position: center;
+    background-size: cover;
+    width: fit-content;
+    max-width: 70%;
+    height: fit-content;
+  }
+
+  .swiperSliders img {
+    display: block;
+    width: 100%;
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
 }

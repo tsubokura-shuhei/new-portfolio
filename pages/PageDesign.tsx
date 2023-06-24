@@ -68,6 +68,7 @@ export default function PageDesign() {
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
+          loop={true}
           centeredSlides={true}
           slidesPerView={"auto"}
           autoplay={{
