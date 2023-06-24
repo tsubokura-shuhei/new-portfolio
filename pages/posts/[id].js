@@ -9,6 +9,7 @@ import Header from "../../components/atomic/templates/Header";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 
 import "swiper/css";
+
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
@@ -58,7 +59,7 @@ export default function Post({ postData }) {
               grabCursor={true}
               loop={true}
               centeredSlides={true}
-              slidesPerView={"auto"}
+              slidesPerView={1.5}
               autoplay={{
                 delay: 3000,
                 disableOnInteraction: false,
