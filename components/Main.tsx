@@ -119,7 +119,7 @@ export const Main = () => {
         width: "100%",
         height: "100vh",
         top: "0",
-        position: "relative",
+        position: "fixed",
       }}
     >
       <Canvas>
@@ -176,11 +176,11 @@ export const Main = () => {
         ))}
         <Plane />
       </Canvas>
-      <div className={herader.type01}>
+      {/* <div className={herader.type01}>
         <div className={herader.type}>
           <a href="#type02">Scroll</a>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

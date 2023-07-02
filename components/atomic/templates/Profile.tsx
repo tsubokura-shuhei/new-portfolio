@@ -2,10 +2,18 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "../../style/profile.module.scss";
 
+import herader from "../components/style/header.module.scss"; //アップセット
+import "animate.css"; //アップセット
+import useUpset from "../../../hooks/useUpset"; //アップセット
+
 const Profile = () => {
+  const { ref, inView } = useUpset(); //アップセット
+
   return (
-    <div className={styles.prosile}>
-      <h1>Profile</h1>
+    <div className={styles.prosile} ref={ref}>
+      {inView && (
+        <h1 className="animate__animated animate__fadeInUp">Profile</h1>
+      )}
       <div className={styles.container}>
         <div className={styles.image_inner}>
           <img src="/images/profile/profile.jpeg" alt="" />
