@@ -72,31 +72,35 @@ const Home: NextPage = ({ allPostsData }: any) => {
         ref={ref}
       >
         {inView && (
-          <h2 className="animate__animated animate__fadeInUp">
-            WORKS<span>実績</span>
-          </h2>
-        )}
-        {inView && (
-          <div className={styles.container}>
-            <ul>
-              {allPostsData.map(({ id, title, date, thumbnail }: Props) => (
-                <li key={id}>
-                  <Link href={`/posts/${id}`}>
-                    <div className={styles.img_inner}>
-                      <div className="animate__animated animate__fadeInUp">
-                        <img src={`${thumbnail}`} alt="" />
-                        <div className={styles.link_contents}>
-                          <p>ViewMore</p>
+          <>
+            <h2 className="animate__animated animate__fadeInUp">
+              WORKS<span>実績</span>
+            </h2>
+            <div>
+              <div className={styles.container}>
+                <ul>
+                  {allPostsData.map(({ id, title, date, thumbnail }: Props) => (
+                    <li key={id}>
+                      <Link
+                        href={`/posts/${id}`}
+                        className="animate__animated animate__fadeIn"
+                        style={{ animationDuration: "2s" }}
+                      >
+                        <div className={styles.img_inner}>
+                          <img src={`${thumbnail}`} alt="" />
+                          <div className={styles.link_contents}>
+                            <p>ViewMore</p>
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                    <p>{title}</p>
-                    <p>{date}</p>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+                        <p>{title}</p>
+                        <p>{date}</p>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </>
         )}
       </div>
       <div style={{ position: "relative", display: "block" }}>
