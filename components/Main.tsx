@@ -2,7 +2,6 @@ import * as THREE from "three";
 import React, { useRef, useState, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { vertexShader, fragmentShader } from "./shader";
-import herader from "../components/style/header.module.scss";
 
 export const Main = () => {
   let frame = 0;
@@ -176,11 +175,7 @@ export const Main = () => {
         ))}
         <Plane />
       </Canvas>
-      {/* <div className={herader.type01}>
-        <div className={herader.type}>
-          <a href="#type02">Scroll</a>
-        </div>
-      </div> */}
+      
     </div>
   );
 };

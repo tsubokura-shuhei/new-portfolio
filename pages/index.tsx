@@ -56,8 +56,44 @@ const Home: NextPage = ({ allPostsData }: any) => {
             // transform: "translateY(-50%)",
           }}
         >
-          <span>Tsubokura Shuhei</span>
-          <span style={{ width: "100%" }}>WEB DESIGNER</span>
+          <div id={herader.title_container}>
+            <div className={herader.title}>
+              <div className={herader.brtag1}>
+                <span>T</span>
+                <span>s</span>
+                <span>u</span>
+                <span>b</span>
+                <span>o</span>
+                <span>k</span>
+                <span>u</span>
+                <span>r</span>
+                <span>a</span>
+              </div>
+              <div className={herader.brtag2}>
+                <span>S</span>
+                <span>h</span>
+                <span>u</span>
+                <span>h</span>
+                <span>e</span>
+                <span>i</span>
+              </div>
+              <div className={herader.brtag3}>
+                <span>W</span>
+                <span>E</span>
+                <span>B</span>
+              </div>
+              <div className={herader.brtag4}>
+                <span>D</span>
+                <span>E</span>
+                <span>S</span>
+                <span>I</span>
+                <span>G</span>
+                <span>N</span>
+                <span>E</span>
+                <span>R</span>
+              </div>
+            </div>
+          </div>
         </h1>
         <div className={herader.type01}>
           <div className={herader.type}>
