@@ -1,3 +1,11 @@
+$mb: 767px;
+
+@mixin mobile {
+  @media screen and (max-width: $mb) {
+    @content;
+  }
+}
+
 .work {
   padding: 60px 0px;
   h2 {
@@ -15,11 +23,17 @@
       justify-content: center;
       margin: 0px;
       padding: 0px;
+      @include mobile {
+        padding: 0px 15px;
+      }
     }
     li {
       width: 26%;
       padding: 1% 1%;
       list-style-type: none;
+      @include mobile {
+        width: 100%;
+      }
       .img_inner {
         position: relative;
         img {

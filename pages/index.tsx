@@ -46,15 +46,12 @@ const Home: NextPage = ({ allPostsData }: any) => {
       <div style={{ display: "block", width: "100vw", height: "100vh" }}>
         <Header />
         <h1
-          style={{
-            width: "500px",
-            fontSize: "100px",
-            position: "absolute",
-            display: "grid",
-            left: "10%",
-            top: "0",
-            // transform: "translateY(-50%)",
-          }}
+          className={herader.main_title}
+          style={
+            {
+              // transform: "translateY(-50%)",
+            }
+          }
         >
           <div id={herader.title_container}>
             <div className={herader.title}>
@@ -104,7 +101,7 @@ const Home: NextPage = ({ allPostsData }: any) => {
 
       <div
         className={styles.work}
-        style={{ backgroundColor: "#F6F6F6" }}
+        style={{ backgroundColor: "#f6f6f6" }}
         ref={ref}
       >
         {inView && (

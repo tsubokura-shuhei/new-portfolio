@@ -19,7 +19,6 @@ export type Props = {
 //SSGの場合
 export async function getStaticProps() {
   const allPostsData = getPostsData(); //di, title, date, thumbnailが入ってる
-  console.log(allPostsData);
 
   return {
     props: {
