@@ -1,3 +1,18 @@
+$mb: 767px;
+$pc: 768px;
+
+@mixin mobile {
+  @media screen and (max-width: $mb) {
+    @content;
+  }
+}
+
+@mixin pc_screen {
+  @media screen and (min-width: $pc) {
+    @content;
+  }
+}
+
 .container {
   margin: 0 auto;
 }
@@ -14,6 +29,9 @@
       font-size: 42px;
       display: grid;
       text-align: center;
+      @include mobile {
+        font-size: 8vw;
+      }
       span {
         font-size: 24px;
         color: #c2c2c2;

@@ -1,7 +1,14 @@
 $mb: 767px;
+$pc: 768px;
 
 @mixin mobile {
   @media screen and (max-width: $mb) {
+    @content;
+  }
+}
+
+@mixin pc_screen {
+  @media screen and (min-width: $pc) {
     @content;
   }
 }
@@ -54,15 +61,17 @@ $mb: 767px;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          &:hover {
-            opacity: 1;
-          }
           p {
             color: #fff;
             transform: translateY(-5px);
-            &:hover {
-              transform: translateY(0px);
-            }
+          }
+        }
+        @include pc_screen {
+          .link_contents:hover {
+            opacity: 1;
+          }
+          p:hover {
+            transform: translateY(0px);
           }
         }
       }
@@ -70,6 +79,7 @@ $mb: 767px;
         color: #333;
         margin: 0px;
         width: fit-content;
+        font-weight: bold;
       }
     }
   }

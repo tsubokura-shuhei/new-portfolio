@@ -246,6 +246,9 @@ h1.main_title {
   writing-mode: vertical-lr;
   transition: 0.2s;
   overflow: hidden;
+  @include mobile {
+    right: 20px;
+  }
   &::after {
     content: "";
     position: absolute;
