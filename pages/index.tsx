@@ -12,6 +12,7 @@ import herader from "../components/style/header.module.scss"; //アップセッ�
 import "animate.css"; //アップセット
 
 import useUpset from "../hooks/useUpset";
+import Footer from "../components/atomic/templates/Footer";
 
 export type Props = {
   id: number | undefined;
@@ -40,10 +41,7 @@ const Home: NextPage = ({ allPostsData }: any) => {
   return (
     <div>
       <Main />
-      {/* {timer ? (
-        <Loading />
-      ) : (
-        <> */}
+
       <div style={{ display: "block", width: "100vw", height: "100vh" }}>
         <Header />
         <h1
@@ -152,8 +150,7 @@ const Home: NextPage = ({ allPostsData }: any) => {
         ></div>
         <Profile />
       </div>
-      {/* </>
-      )} */}
+      <Footer />
     </div>
   );
 };

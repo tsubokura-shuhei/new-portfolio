@@ -10,6 +10,21 @@
       display: block;
       margin: 0 auto;
     }
+    a {
+      color: #007bff;
+      text-decoration: underline;
+      cursor: pointer;
+      position: relative;
+      .icon {
+        width: 18px;
+        position: absolute;
+        top: -4px;
+        right: -20px;
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   }
 
   //スライダー

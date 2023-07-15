@@ -15,6 +15,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import Header from "../components/atomic/templates/Header";
+import Footer from "../components/atomic/templates/Footer";
 
 export default function PageDesign() {
   const [moduleOpen, setModuleOpen] = useState(false);
@@ -128,6 +129,7 @@ export default function PageDesign() {
         </Box>
         {/* マテリアルUI追加箇所▲ */}
       </Layout>
+      <Footer />
     </div>
   );
 }

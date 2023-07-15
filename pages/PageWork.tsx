@@ -7,6 +7,7 @@ import styles from "../components/style/work.module.scss";
 
 import { getPostsData } from "../lib/post";
 import Header from "../components/atomic/templates/Header";
+import Footer from "../components/atomic/templates/Footer";
 
 export type Props = {
   id: number | undefined;
@@ -58,6 +59,7 @@ const PageWork: NextPage = ({ allPostsData }: any) => {
           </div>
         </div>
       </Layout>
+      <Footer />
     </div>
   );
 };

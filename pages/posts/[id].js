@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import Header from "../../components/atomic/templates/Header";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
+import { ExternalLink } from "react-feather";
 
 import "swiper/css";
 
@@ -52,7 +53,10 @@ export default function Post({ postData }) {
             <div>{postData.text}</div>
             <div>{postData.text2}</div>
             <div>
-              <Link href={`${postData.text3}`}>{postData.text3}</Link>
+              <Link href={`${postData.text3}`} target="_blank">
+                {postData.text3}
+                <ExternalLink className={styles.icon} />
+              </Link>
             </div>
             <Swiper
               effect={"coverflow"}
