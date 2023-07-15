@@ -8,5 +8,6 @@ text3: "http://limeokapi95.sakura.ne.jp/work/yagan"
 image1: "/images/work/page05/image02.jpg"
 image2: "/images/work/page05/image03.jpg"
 image3: "/images/work/page05/image04.jpg"
+image4: "/images/work/page05/image01.gif"
 spimage: "/images/work/sp/image_sp_05.png"
 ---

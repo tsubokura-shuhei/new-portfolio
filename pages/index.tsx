@@ -19,6 +19,7 @@ export type Props = {
   date: string;
   thumbnail: string;
   text?: string;
+  image4: string;
 };
 
 //SSGの場合
@@ -112,7 +113,7 @@ const Home: NextPage = ({ allPostsData }: any) => {
             <div>
               <div className={styles.container}>
                 <ul>
-                  {allPostsData.map(({ id, title, date, thumbnail }: Props) => (
+                  {allPostsData.map(({ id, title, date, image4 }: Props) => (
                     <li key={id}>
                       <Link
                         href={`/posts/${id}`}
@@ -120,7 +121,7 @@ const Home: NextPage = ({ allPostsData }: any) => {
                         style={{ animationDuration: "2s" }}
                       >
                         <div className={styles.img_inner}>
-                          <img src={`${thumbnail}`} alt="" />
+                          <img src={`${image4}`} alt="" />
                           <div className={styles.link_contents}>
                             <p>ViewMore</p>
                           </div>

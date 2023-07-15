@@ -8,5 +8,6 @@ text3: "http://limeokapi95.sakura.ne.jp/work/nikko_freeday2022"
 image1: "/images/work/page03/image02.jpg"
 image2: "/images/work/page03/image03.jpg"
 image3: "/images/work/page03/image04.jpg"
+image4: "/images/work/page03/image01.gif"
 spimage: "/images/work/sp/image_sp_03.png"
 ---

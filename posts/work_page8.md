@@ -8,5 +8,6 @@ text3: "https://mensmart-main7295-lowlands.herokuapp.com/"
 image1: "/images/work/page06/image02.jpg"
 image2: "/images/work/page06/image03.jpg"
 image3: "/images/work/page06/image04.jpg"
+image4: "/images/work/page06/image01.gif"
 spimage: "/images/work/sp/image_sp_06.png"
 ---

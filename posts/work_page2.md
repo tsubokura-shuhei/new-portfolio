@@ -8,5 +8,6 @@ text3: "http://limeokapi95.sakura.ne.jp/work/urban"
 image1: "/images/work/page07/image02.jpg"
 image2: "/images/work/page07/image03.jpg"
 image3: "/images/work/page07/image04.jpg"
+image4: "/images/work/page07/image01.gif"
 spimage: "/images/work/sp/image_sp_07.png"
 ---
