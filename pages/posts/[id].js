@@ -5,7 +5,6 @@ import Link from "next/link.js";
 import { Center } from "@react-three/drei";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import Header from "../../components/atomic/templates/Header";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 import { ExternalLink } from "react-feather";
 
@@ -36,9 +35,8 @@ export async function getStaticProps({ params }) {
 export default function Post({ postData }) {
   return (
     <>
-      <Header />
-      <div className={styles.work}>
-        <Layout>
+      <Layout>
+        <div className={styles.work}>
           <div className={styles.workContainer}>
             <h1>
               WORKS<span>実績</span>
@@ -95,8 +93,8 @@ export default function Post({ postData }) {
             </Swiper>
             <img src={`${postData.spimage}`} style={{ width: "100%" }} />
           </div>
-        </Layout>
-      </div>
+        </div>
+      </Layout>
     </>
   );
 }

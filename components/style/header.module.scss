@@ -1,5 +1,8 @@
 $mb: 767px;
 
+$title_font_pc: 14vh;
+$title_font_sp: 15vw;
+
 @mixin mobile {
   @media screen and (max-width: $mb) {
     @content;
@@ -7,15 +10,15 @@ $mb: 767px;
 }
 
 h1.main_title {
-  width: 500px;
-  font-size: 100px;
   position: absolute;
-  display: grid;
-  left: 10%;
-  top: 0;
+  top: 12vh;
+  left: 12vw;
   @include mobile {
-    width: auto;
-    top: 7%;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -298,11 +301,12 @@ h1.main_title {
     .brtag1 {
       display: flex;
       overflow: hidden;
-      font-size: 14vh;
+
+      font-size: $title-font-pc;
       font-weight: bold;
       color: #333;
       @include mobile {
-        font-size: 15vw;
+        font-size: $title-font-sp;
       }
       span {
         display: inline-block;
@@ -317,11 +321,11 @@ h1.main_title {
     .brtag2 {
       display: flex;
       overflow: hidden;
-      font-size: 14vh;
+      font-size: $title-font-pc;
       font-weight: bold;
       color: #333;
       @include mobile {
-        font-size: 15vw;
+        font-size: $title-font-sp;
       }
       span {
         display: inline-block;
@@ -336,11 +340,11 @@ h1.main_title {
     .brtag3 {
       display: flex;
       overflow: hidden;
-      font-size: 14vh;
+      font-size: $title-font-pc;
       font-weight: bold;
       color: #c2c2c2;
       @include mobile {
-        font-size: 15vw;
+        font-size: $title-font-sp;
       }
       span {
         display: inline-block;
@@ -355,11 +359,11 @@ h1.main_title {
     .brtag4 {
       display: flex;
       overflow: hidden;
-      font-size: 14vh;
+      font-size: $title-font-pc;
       font-weight: bold;
       color: #c2c2c2;
       @include mobile {
-        font-size: 15vw;
+        font-size: $title-font-sp;
       }
       span {
         display: inline-block;

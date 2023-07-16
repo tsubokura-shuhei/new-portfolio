@@ -18,9 +18,11 @@ $pc: 768px;
 }
 .header {
   width: 100%;
+  height: fit-content;
   display: grid;
   margin: 0 auto;
   font-size: 12px;
+  padding: 30px 0px 0px 0px;
   // background-color: #fff;
   a {
     width: fit-content;

@@ -1,27 +1,30 @@
-#root {
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-}
-
-.home_container {
+.business_container {
   scroll-snap-type: y mandatory;
   overflow: auto;
-  display: block;
+  height: 100vh;
   .cont {
     scroll-snap-align: start;
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    p {
+      font-size: 40px;
+      font-weight: bold;
+      color: #fff;
+    }
     &:first-of-type {
+      background: #0e7fbd;
     }
     &:nth-of-type(2) {
-      background-color: #f6f6f6;
+      background: #27b75b;
     }
     &:nth-of-type(3) {
+      background: #d47d1b;
     }
     &:nth-of-type(4) {
+      background: #513cb8;
     }
   }
 }

@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import { Layout } from "../components/Layout";
 import { useState } from "react";
 import { Box, Button, Modal, Typography } from "@mui/material";
 import { imageFile } from "../lib/imageFile";
@@ -14,8 +13,8 @@ import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import Header from "../components/atomic/templates/Header";
-import Footer from "../components/atomic/templates/Footer";
+import Header from "../components/atomic/templates/ToggleBtn";
+import { Layout } from "../components/Layout";
 
 export default function PageDesign() {
   const [moduleOpen, setModuleOpen] = useState(false);
@@ -61,75 +60,71 @@ export default function PageDesign() {
   //マテリアルUI追加箇所▲
 
   return (
-    <div>
-      <Header />
-      <Layout>
-        <h1>デザインページ</h1>
-        <Link href="/">HOME</Link>
-        <Swiper
-          effect={"coverflow"}
-          grabCursor={true}
-          loop={true}
-          centeredSlides={true}
-          slidesPerView={"auto"}
-          speed={2000}
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: false,
-          }}
-          coverflowEffect={{
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-          }}
-          pagination={true}
-          modules={[EffectCoverflow, Pagination, Autoplay]}
-          className={styles.mySwiper}
-        >
-          {ButtonList.map((image, index) => (
-            <SwiperSlide key={index} className={styles.swiperSliders}>
-              <img src={`/images/design/${image}`} alt="" />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+    <Layout title="Design">
+      <h1>デザインページ</h1>
+      <Link href="/">HOME</Link>
+      <Swiper
+        effect={"coverflow"}
+        grabCursor={true}
+        loop={true}
+        centeredSlides={true}
+        slidesPerView={"auto"}
+        speed={2000}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        pagination={true}
+        modules={[EffectCoverflow, Pagination, Autoplay]}
+        className={styles.mySwiper}
+      >
+        {ButtonList.map((image, index) => (
+          <SwiperSlide key={index} className={styles.swiperSliders}>
+            <img src={`/images/design/${image}`} alt="" />
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
-        {/* マテリアルUI追加箇所▼ */}
-        <Box className={styles.bnr_container}>
-          <Box className={styles.bnr_inner}>
-            {ButtonList.map((item, index) => (
-              <Box key={index} className={styles.button_container}>
-                <Button
-                  onClick={() => onOpenDialog(item)}
-                  className={styles.button_inner}
-                >
-                  <img src={`/images/design/${item}`} alt="" />
-                </Button>
-                <Modal
-                  open={item === selectedItem}
-                  onClose={onCloseDialog}
-                  aria-labelledby="modal-modal-title"
-                  aria-describedby="modal-modal-description"
-                >
-                  <Box sx={style}>
-                    <Box sx={closeButtonStyle}>
-                      <IconButton onClick={onCloseDialog}>
-                        <CloseIcon />
-                      </IconButton>
-                    </Box>
-                    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                      <img src={`/images/design/${item}`} alt="" />
-                    </Typography>
+      {/* マテリアルUI追加箇所▼ */}
+      <Box className={styles.bnr_container}>
+        <Box className={styles.bnr_inner}>
+          {ButtonList.map((item, index) => (
+            <Box key={index} className={styles.button_container}>
+              <Button
+                onClick={() => onOpenDialog(item)}
+                className={styles.button_inner}
+              >
+                <img src={`/images/design/${item}`} alt="" />
+              </Button>
+              <Modal
+                open={item === selectedItem}
+                onClose={onCloseDialog}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+              >
+                <Box sx={style}>
+                  <Box sx={closeButtonStyle}>
+                    <IconButton onClick={onCloseDialog}>
+                      <CloseIcon />
+                    </IconButton>
                   </Box>
-                </Modal>
-              </Box>
-            ))}
-          </Box>
+                  <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                    <img src={`/images/design/${item}`} alt="" />
+                  </Typography>
+                </Box>
+              </Modal>
+            </Box>
+          ))}
         </Box>
-        {/* マテリアルUI追加箇所▲ */}
-      </Layout>
-      <Footer />
-    </div>
+      </Box>
+      {/* マテリアルUI追加箇所▲ */}
+    </Layout>
   );
 }

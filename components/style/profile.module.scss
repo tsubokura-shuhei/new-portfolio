@@ -29,6 +29,7 @@ $mb: 767px;
     .image_inner {
       display: grid;
       width: fit-content;
+      height: fit-content;
       padding: 0 20px;
       @include mobile {
         margin: auto;

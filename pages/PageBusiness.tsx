@@ -1,18 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
+import Header from "../components/atomic/templates/ToggleBtn";
+import styles from "../components/style/Business.module.scss";
 import { Layout } from "../components/Layout";
-import Header from "../components/atomic/templates/Header";
-import Footer from "../components/atomic/templates/Footer";
 
 export default function PageBusiness() {
   return (
-    <div>
-      <Header />
-      <Layout>
-        <h1>ビジネスページ</h1>
-        <Link href="/">HOME</Link>
-      </Layout>
-      <Footer />
-    </div>
+    <Layout title="Business">
+      <h1>ビジネスページ</h1>
+    </Layout>
   );
 }
