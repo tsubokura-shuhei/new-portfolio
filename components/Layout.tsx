@@ -76,6 +76,7 @@ export const Layout = (props: Props) => {
           </>
         ) : (
           <>
+            <ToggleBtn />
             <div className={styles.header}>
               <Link href="/">
                 <h1>
@@ -83,8 +84,6 @@ export const Layout = (props: Props) => {
                   <span>WEB DESIGNER</span>
                 </h1>
               </Link>
-
-              <ToggleBtn />
             </div>
           </>
         )}

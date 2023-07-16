@@ -81,7 +81,9 @@ const Home: NextPage = ({ allPostsData }: any) => {
                               style={{ animationDuration: "2s" }}
                             >
                               <div className={styles.img_inner}>
-                                <img src={`${image4}`} alt="" />
+                                <div className={styles.img_box}>
+                                  <img src={`${image4}`} alt="" />
+                                </div>
                                 <div
                                   className={styles.link_contents}
                                   onMouseEnter={() => setTextUp(true)}
@@ -95,7 +97,7 @@ const Home: NextPage = ({ allPostsData }: any) => {
                                 </div>
                               </div>
                               <p>{title}</p>
-                              {/* <p>{date}</p> */}
+                              <p className={styles.small}>{date}</p>
                             </Link>
                           </li>
                         )
@@ -107,7 +109,7 @@ const Home: NextPage = ({ allPostsData }: any) => {
             )}
           </div>
         </section>
-        <section className={main_styles.cont}>
+        {/* <section className={main_styles.cont}>
           <div
             style={{
               position: "relative",
@@ -134,7 +136,7 @@ const Home: NextPage = ({ allPostsData }: any) => {
             ></div>
             <Profile />
           </div>
-        </section>
+        </section> */}
       </div>
     </Layout>
   );

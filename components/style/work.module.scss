@@ -16,8 +16,8 @@ $pc: 768px;
 .work_main {
   width: 100%;
   max-width: 1280px;
-  margin: 60px auto;
   box-sizing: border-box;
+  margin: 0 auto;
   h2 {
     width: fit-content;
     text-align: center;
@@ -29,6 +29,10 @@ $pc: 768px;
     width: calc(100% - 100px);
     margin: 0 auto;
     box-sizing: border-box;
+    @include mobile {
+      width: 100%;
+      padding: 0 20px;
+    }
     ul {
       width: 100%;
       display: flex;
@@ -37,7 +41,7 @@ $pc: 768px;
       margin: 0px;
       padding: 0px;
       @include mobile {
-        padding: 0px 15px;
+        padding: 0px;
       }
     }
     li {
@@ -46,11 +50,26 @@ $pc: 768px;
       list-style-type: none;
       @include mobile {
         width: 100%;
+        margin: 0 auto 40px;
+        padding: 0px;
       }
       .img_inner {
         position: relative;
-        img {
-          width: 100%;
+        .img_box {
+          height: auto;
+          @include mobile {
+            height: calc(435px / 2);
+            margin-bottom: 12px;
+          }
+          img {
+            width: 100%;
+            @include mobile {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: top;
+            }
+          }
         }
         .link_contents {
           position: absolute;
@@ -81,6 +100,7 @@ $pc: 768px;
           p.active {
             transform: translateY(20px);
             opacity: 0;
+            user-select: none;
             transition: none;
           }
         }
@@ -90,6 +110,11 @@ $pc: 768px;
         margin: 0px;
         width: fit-content;
         font-weight: bold;
+      }
+      p.small {
+        color: #c2c2c2;
+        font: 12px;
+        font-weight: normal;
       }
     }
   }

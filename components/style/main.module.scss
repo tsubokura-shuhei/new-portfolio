@@ -5,15 +5,15 @@
 }
 
 .home_container {
-  scroll-snap-type: y mandatory;
-  overflow: auto;
-  display: block;
+  // scroll-snap-type: y mandatory;
+  // overflow: auto;
+  // display: block;
   .cont {
-    scroll-snap-align: start;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    // scroll-snap-align: start;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    // align-items: center;
     &:first-of-type {
     }
     &:nth-of-type(2) {
