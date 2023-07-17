@@ -13,11 +13,10 @@ const Profile = () => {
     <div className={styles.prosile} ref={ref}>
       {inView && (
         <>
-          <h1 className="animate__animated animate__fadeInUp">Profile</h1>
-          <div
-            className="animate__animated animate__fadeIn"
-            style={{ animationDuration: "2s" }}
-          >
+          <h2>
+            Profile<span>プロフィール</span>
+          </h2>
+          <div style={{ animationDuration: "2s" }}>
             <div className={styles.container}>
               <div className={styles.image_inner}>
                 <img src="/images/profile/profile.jpeg" alt="" />

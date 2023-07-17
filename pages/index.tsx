@@ -15,6 +15,7 @@ import "animate.css"; //アップセット
 import useUpset from "../hooks/useUpset";
 import { Layout } from "../components/Layout";
 import { Translate } from "@mui/icons-material";
+import Slider from "../components/atomic/templates/Slider";
 
 export type Props = {
   id: number | undefined;
@@ -109,30 +110,15 @@ const Home: NextPage = ({ allPostsData }: any) => {
           </div>
         </section>
         <section className={main_styles.cont}>
-          <div
-            style={{
-              position: "relative",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              width: "100%",
-              height: "100vh",
-              padding: "30px 0px",
-            }}
-          >
-            <div
-              style={{
-                width: "100%",
-                height: "100vh",
-                backgroundColor: "#FFF",
-                opacity: "0.8",
-                zIndex: "-1",
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%,-50%)",
-              }}
-            ></div>
+          <div>
+            <h2>
+              Design<span>デザイン</span>
+            </h2>
+            <Slider />
+          </div>
+        </section>
+        <section className={main_styles.cont}>
+          <div className={main_styles.profile_container}>
             <Profile />
           </div>
         </section>

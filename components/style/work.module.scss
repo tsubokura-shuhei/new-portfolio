@@ -18,12 +18,6 @@ $pc: 768px;
   max-width: 1280px;
   box-sizing: border-box;
   margin: 0 auto;
-  h2 {
-    width: fit-content;
-    text-align: center;
-    margin: 0 auto;
-    font-size: 26px;
-  }
   .container {
     max-width: 1280px;
     width: calc(100% - 100px);
@@ -106,13 +100,13 @@ $pc: 768px;
         }
       }
       p {
-        color: #333;
+        // color: #333;
         margin: 0px;
         width: fit-content;
         font-weight: bold;
       }
       p.small {
-        color: #c2c2c2;
+        // color: #c2c2c2;
         font: 12px;
         font-weight: normal;
       }
