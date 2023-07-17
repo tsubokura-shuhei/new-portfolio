@@ -175,17 +175,40 @@
 
 .swiperSlide {
   width: 80%;
+  position: relative;
 }
 
 .swiperSlide p {
+  position: absolute;
+  display: flex;
+  bottom: 47px;
+  padding: 10px;
+
   font-size: 32px;
   font-weight: bold;
   opacity: 0;
+  background-color: #f6f6f6;
 }
+
+.swiperSlide p.small {
+  font-size: 18px;
+  position: absolute;
+  display: flex;
+  bottom: 0px;
+  padding: 10px;
+}
+
 .swiperSlide.active p {
   animation-name: sample-animation1;
-  animation-duration: 6s;
+  animation-duration: 10s;
   animation-iteration-count: 1;
+}
+
+.swiperSlide p.small {
+  font-size: 18px;
+}
+.swiperSlide.active p.small {
+  font-size: 18px;
 }
 
 @keyframes sample-animation1 {
@@ -193,9 +216,9 @@
     opacity: 0;
     transform: translateY(20px);
   }
-  40% {
+  20% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(0px);
   }
   50% {
     opacity: 1;

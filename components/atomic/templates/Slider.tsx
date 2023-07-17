@@ -19,7 +19,7 @@ const Slider = () => {
       slidesPerView={"auto"}
       speed={2000}
       autoplay={{
-        delay: 4000,
+        delay: 10000,
         disableOnInteraction: false,
       }}
       coverflowEffect={{
@@ -43,6 +43,9 @@ const Slider = () => {
               }`}
             >
               <p>テキスト</p>
+              <p className={style_design.small}>
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              </p>
             </div>
           </>
         )}
@@ -57,6 +60,9 @@ const Slider = () => {
               }`}
             >
               <p>テキスト</p>
+              <p className={style_design.small}>
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              </p>
             </div>
           </>
         )}
@@ -71,7 +77,9 @@ const Slider = () => {
               }`}
             >
               <p>テキスト</p>
-              <p>テキスト</p>
+              <p className={style_design.small}>
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              </p>
             </div>
           </>
         )}
@@ -86,6 +94,9 @@ const Slider = () => {
               }`}
             >
               <p>テキスト</p>
+              <p className={style_design.small}>
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              </p>
             </div>
           </>
         )}

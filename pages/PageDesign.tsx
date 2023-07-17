@@ -15,6 +15,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import Header from "../components/atomic/templates/ToggleBtn";
 import { Layout } from "../components/Layout";
+import Slider from "../components/atomic/templates/Slider";
 
 export default function PageDesign() {
   const [moduleOpen, setModuleOpen] = useState(false);
@@ -62,35 +63,8 @@ export default function PageDesign() {
   return (
     <Layout title="Design">
       <h1>デザインページ</h1>
-      <Link href="/">HOME</Link>
-      <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        loop={true}
-        centeredSlides={true}
-        slidesPerView={"auto"}
-        speed={2000}
-        autoplay={{
-          delay: 4000,
-          disableOnInteraction: false,
-        }}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination, Autoplay]}
-        className={styles.mySwiper}
-      >
-        {ButtonList.map((image, index) => (
-          <SwiperSlide key={index} className={styles.swiperSliders}>
-            <img src={`/images/design/${image}`} alt="" />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+
+      <Slider />
 
       {/* マテリアルUI追加箇所▼ */}
       <Box className={styles.bnr_container}>
