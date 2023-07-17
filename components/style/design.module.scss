@@ -162,7 +162,51 @@
 
 //メインスライダー
 .image_container {
+  .swiper-slide.swiper-slide-prev {
+    color: #000;
+  }
+  .swiper-slide.swiper-slide-prev.acrive {
+    color: red;
+  }
   img {
     width: 100%;
+  }
+}
+
+.swiperSlide {
+  width: 80%;
+}
+
+.swiperSlide p {
+  font-size: 32px;
+  font-weight: bold;
+  opacity: 0;
+}
+.swiperSlide.active p {
+  animation-name: sample-animation1;
+  animation-duration: 6s;
+  animation-iteration-count: 1;
+}
+
+@keyframes sample-animation1 {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  40% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
   }
 }
