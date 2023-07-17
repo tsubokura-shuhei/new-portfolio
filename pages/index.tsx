@@ -66,7 +66,7 @@ const Home: NextPage = ({ allPostsData }: any) => {
           <div className={styles.work_main} ref={ref}>
             {inView && (
               <>
-                <h2 className="animate__animated animate__fadeInUp">
+                <h2>
                   WORKS<span>実績</span>
                 </h2>
                 <div>
@@ -77,7 +77,6 @@ const Home: NextPage = ({ allPostsData }: any) => {
                           <li key={id}>
                             <Link
                               href={`/posts/${id}`}
-                              className="animate__animated animate__fadeIn"
                               style={{ animationDuration: "2s" }}
                             >
                               <div className={styles.img_inner}>
@@ -109,7 +108,7 @@ const Home: NextPage = ({ allPostsData }: any) => {
             )}
           </div>
         </section>
-        {/* <section className={main_styles.cont}>
+        <section className={main_styles.cont}>
           <div
             style={{
               position: "relative",
@@ -136,7 +135,7 @@ const Home: NextPage = ({ allPostsData }: any) => {
             ></div>
             <Profile />
           </div>
-        </section> */}
+        </section>
       </div>
     </Layout>
   );
