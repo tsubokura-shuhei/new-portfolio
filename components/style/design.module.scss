@@ -1,3 +1,18 @@
+$mb: 767px;
+$pc: 768px;
+
+@mixin mobile {
+  @media screen and (max-width: $mb) {
+    @content;
+  }
+}
+
+@mixin pc_screen {
+  @media screen and (min-width: $pc) {
+    @content;
+  }
+}
+
 .buttonContainer {
   display: flex;
   justify-content: flex-end;
@@ -162,6 +177,11 @@
 
 //メインスライダー
 .image_container {
+  width: 100%;
+  max-width: 895px;
+  @include mobile {
+    width: 100%;
+  }
   .swiper-slide.swiper-slide-prev {
     color: #000;
   }
@@ -170,16 +190,61 @@
   }
   img {
     width: 100%;
+    padding: 0 20px;
+  }
+  .slider_btn {
+    display: flex;
+    position: relative;
+    background-color: #143448;
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px;
+  }
+  .slider_btn.btn_prev::before {
+    opacity: 1;
+    top: 44%;
+    right: 50%;
+    margin: -5px -3px 0 0;
+    border-width: 3px 3px 0 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    border-style: solid;
+    border-color: #ffffff;
+    content: "";
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .slider_btn.btn_next::before {
+    opacity: 1;
+    top: 44%;
+    left: 50%;
+    margin: -5px 0 0 -3px;
+    border-width: 3px 3px 0 0;
+    -webkit-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    border-style: solid;
+    border-color: #ffffff;
+    content: "";
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
   }
 }
 
 .swiperSlide {
-  width: 80%;
-  position: relative;
+  width: 100%;
 }
 
 .swiperSlide p {
-  position: absolute;
   display: flex;
   bottom: 47px;
   padding: 10px;
@@ -187,12 +252,10 @@
   font-size: 32px;
   font-weight: bold;
   opacity: 0;
-  background-color: #f6f6f6;
 }
 
 .swiperSlide p.small {
   font-size: 18px;
-  position: absolute;
   display: flex;
   bottom: 0px;
   padding: 10px;
@@ -214,22 +277,32 @@
 @keyframes sample-animation1 {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    user-select: none;
+    transform: translateY(30px);
   }
   20% {
     opacity: 0;
+    user-select: none;
+    transform: translateY(30px);
+  }
+  30% {
+    opacity: 1;
+    user-select: auto;
     transform: translateY(0px);
   }
   50% {
     opacity: 1;
+    user-select: auto;
     transform: translateY(0px);
   }
   90% {
     opacity: 1;
+    user-select: auto;
     transform: translateY(0px);
   }
   100% {
     opacity: 0;
-    transform: translateY(20px);
+    user-select: none;
+    transform: translateY(30px);
   }
 }
