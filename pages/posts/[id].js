@@ -38,19 +38,22 @@ export default function Post({ postData }) {
       <Layout>
         <div className={styles.work}>
           <div className={styles.workContainer}>
-            <h1>
+            <h2>
               WORKS<span>実績</span>
-            </h1>
+            </h2>
             <img
               src={`${postData.thumbnail}`}
               alt=""
               style={{ maxWidth: "1024px", width: "100%" }}
+              className={styles.work_image}
             />
-            <h2>{postData.title}</h2>
-            <div>{postData.date}</div>
-            <div>{postData.text}</div>
-            <div>{postData.text2}</div>
-            <div>
+            <h3>{postData.title}</h3>
+            <div className={styles.text_area}>
+              <p>{postData.date}</p>
+              <p>{postData.text}</p>
+              <p className={styles.text_data}>{postData.text2}</p>
+            </div>
+            <div className={styles.icon_container}>
               <Link href={`${postData.text3}`} target="_blank">
                 {postData.text3}
                 <ExternalLink className={styles.icon} />
