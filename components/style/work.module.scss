@@ -113,3 +113,9 @@ $pc: 768px;
     }
   }
 }
+.work_main.work_page {
+  margin-bottom: 80px;
+  @include mobile {
+    margin-bottom: 40px;
+  }
+}
