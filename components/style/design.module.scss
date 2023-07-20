@@ -151,10 +151,10 @@ $pc: 768px;
 
 .design_container {
   width: fit-content;
-  padding: 20px;
+  padding: 20px !important;
   @include mobile {
-    width: 90%;
-    padding: 20px;
+    width: 90% !important;
+    padding: 20px !important;
   }
 }
 
