@@ -62,7 +62,9 @@ export default function PageDesign() {
 
   return (
     <Layout title="Design">
-      <h1>デザインページ</h1>
+      <h2>
+        DESIGN<span>デザイン</span>
+      </h2>
 
       <Slider />
 
@@ -83,13 +85,24 @@ export default function PageDesign() {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
               >
-                <Box sx={style}>
+                <Box sx={style} className={styles.design_container}>
                   <Box sx={closeButtonStyle}>
-                    <IconButton onClick={onCloseDialog}>
+                    <IconButton
+                      onClick={onCloseDialog}
+                      style={{
+                        position: "relative",
+                        top: "-20px",
+                        right: "-20px",
+                      }}
+                    >
                       <CloseIcon />
                     </IconButton>
                   </Box>
-                  <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                  <Typography
+                    id="modal-modal-description"
+                    sx={{ mt: 2 }}
+                    className={styles.design_image_container}
+                  >
                     <img src={`/images/design/${item}`} alt="" />
                   </Typography>
                 </Box>
