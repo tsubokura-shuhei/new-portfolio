@@ -6,7 +6,10 @@ import { EffectCoverflow, Pagination, Autoplay, Navigation } from "swiper";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
+
+import "swiper/css/navigation"; // スタイルをインポート
+import "swiper/css/pagination"; // スタイルをインポート
+
 import { useRef } from "react";
 
 const Slider = () => {
@@ -27,7 +30,7 @@ const Slider = () => {
         disableOnInteraction: false,
       }}
       navigation={{ prevEl: "#button_prev", nextEl: "#button_next" }}
-      pagination={true}
+      pagination={{ el: "#swiper_pagination_btn ", clickable: true }}
       modules={[EffectCoverflow, Pagination, Autoplay, Navigation]}
       className={style_design.image_container}
     >
@@ -41,9 +44,7 @@ const Slider = () => {
               }`}
             >
               <p>テキスト</p>
-              <p className={style_design.small}>
-                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-              </p>
+              <p className={style_design.small}>テキストテキストテキストテ</p>
             </div>
           </>
         )}
@@ -59,7 +60,7 @@ const Slider = () => {
             >
               <p>テキスト</p>
               <p className={style_design.small}>
-                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                テキストテキストテキストテキストテキスト
               </p>
             </div>
           </>
@@ -75,9 +76,7 @@ const Slider = () => {
               }`}
             >
               <p>テキスト</p>
-              <p className={style_design.small}>
-                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-              </p>
+              <p className={style_design.small}>テキストテキストテキ</p>
             </div>
           </>
         )}
@@ -93,20 +92,32 @@ const Slider = () => {
             >
               <p>テキスト</p>
               <p className={style_design.small}>
-                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                テキストテキストテキストテキストテキストテキストテキストテキス
               </p>
             </div>
           </>
         )}
       </SwiperSlide>
+      <div className={style_design.container_btn}>
+        <div
+          id="button_prev"
+          className={`${style_design.slider_btn} ${style_design.btn_next}`}
+        ></div>
+        <div
+          id="button_next"
+          className={`${style_design.slider_btn} ${style_design.btn_prev}`}
+        ></div>
+      </div>
+
       <div
-        id="button_prev"
-        className={`${style_design.slider_btn} ${style_design.btn_prev}`}
-      ></div>
-      <div
-        id="button_next"
-        className={`${style_design.slider_btn} ${style_design.btn_next}`}
-      ></div>
+        id="swiper_pagination_btn"
+        className={style_design.swiper_pagination}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </Swiper>
   );
 };

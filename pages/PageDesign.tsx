@@ -66,7 +66,9 @@ export default function PageDesign() {
         DESIGN<span>デザイン</span>
       </h2>
 
-      <Slider />
+      <div className={styles.design_page_slider}>
+        <Slider />
+      </div>
 
       {/* マテリアルUI追加箇所▼ */}
       <Box className={styles.bnr_container}>
