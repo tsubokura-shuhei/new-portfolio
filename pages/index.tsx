@@ -59,7 +59,7 @@ const Home: NextPage = ({ allPostsData }: any) => {
     <Layout title="Home">
       <div className={main_styles.home_container}>
         <section className={main_styles.cont}>
-          {/* <Main /> */}
+          <Main />
 
           <div
             style={{
