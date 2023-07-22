@@ -10,6 +10,9 @@ $mb: 767px;
 .prosile {
   font-size: 13px;
   color: #000000;
+  @include mobile {
+    margin-bottom: 40px;
+  }
   .wrapper {
     // height: 100vh;
   }
