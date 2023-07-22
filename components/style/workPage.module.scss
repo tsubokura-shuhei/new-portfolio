@@ -65,7 +65,7 @@ $pc: 768px;
       margin: 0 auto;
     }
     .icon_container {
-      width: 100px;
+      width: fit-content;
       font-size: 14px;
       margin-top: 6px;
       @include mobile {
@@ -77,6 +77,7 @@ $pc: 768px;
         text-decoration: underline;
         cursor: pointer;
         position: relative;
+        line-height: 0.2em;
         .icon {
           width: 18px;
           position: absolute;

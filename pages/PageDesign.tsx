@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Box, Button, Modal, Typography } from "@mui/material";
 import { imageFile } from "../lib/imageFile";
 import IconButton from "@mui/material/IconButton";
@@ -37,6 +37,12 @@ export default function PageDesign() {
     p: 4,
   };
 
+  const [numberBtn, setNumberBtn] = useState<boolean>(false);
+
+  useEffect(() => {
+    setNumberBtn(false);
+  }, []);
+
   const closeButtonStyle = {
     height: 0,
     textAlign: "right",
@@ -67,7 +73,7 @@ export default function PageDesign() {
       </h2>
 
       <div className={styles.design_page_slider}>
-        <Slider />
+        <Slider setBtn={numberBtn} />
       </div>
 
       {/* マテリアルUI追加箇所▼ */}

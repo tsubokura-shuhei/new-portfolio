@@ -7,7 +7,7 @@ import { Main } from "../components/Main";
 import { getPostsData } from "../lib/post";
 import Profile from "../components/atomic/templates/Profile";
 import Header from "../components/atomic/templates/ToggleBtn";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { memo, useCallback, useEffect, useState } from "react";
 import Loading from "../components/atomic/molecules/Loading";
 import herader from "../components/style/header.module.scss"; //アップセット
 import "animate.css"; //アップセット
@@ -39,14 +39,27 @@ export async function getStaticProps() {
 }
 
 const Home: NextPage = ({ allPostsData }: any) => {
-  const { ref, inView } = useUpset(); //アップセット
   const [textUp, setTextUp] = useState(false);
+
+  const [numberBtn, setNumberBtn] = useState<boolean>(true);
+
+  useEffect(() => {
+    setNumberBtn(true);
+  }, []);
+
+  const handleMoseEnter = useCallback(() => {
+    setTextUp(true);
+  }, []);
+
+  const handleMoseLeave = useCallback(() => {
+    setTextUp(false);
+  }, []);
 
   return (
     <Layout title="Home">
       <div className={main_styles.home_container}>
         <section className={main_styles.cont}>
-          <Main />
+          {/* <Main /> */}
 
           <div
             style={{
@@ -64,49 +77,38 @@ const Home: NextPage = ({ allPostsData }: any) => {
           </div>
         </section>
         <section className={main_styles.cont}>
-          <div className={styles.work_main} ref={ref}>
-            {inView && (
-              <>
-                <h2>
-                  WORKS<span>実績</span>
-                </h2>
-                <div>
-                  <div className={styles.container}>
-                    <ul>
-                      {allPostsData.map(
-                        ({ id, title, date, image4 }: Props) => (
-                          <li key={id}>
-                            <Link
-                              href={`/posts/${id}`}
-                              style={{ animationDuration: "2s" }}
-                            >
-                              <div className={styles.img_inner}>
-                                <div className={styles.img_box}>
-                                  <img src={`${image4}`} alt="" />
-                                </div>
-                                <div
-                                  className={styles.link_contents}
-                                  onMouseEnter={() => setTextUp(true)}
-                                  onMouseLeave={() => setTextUp(false)}
-                                >
-                                  <p
-                                    className={textUp ? "" : `${styles.active}`}
-                                  >
-                                    ViewMore
-                                  </p>
-                                </div>
-                              </div>
-                              <p>{title}</p>
-                              <p className={styles.small}>{date}</p>
-                            </Link>
-                          </li>
-                        )
-                      )}
-                    </ul>
-                  </div>
-                </div>
-              </>
-            )}
+          <div className={styles.work_main}>
+            <h2>
+              WORKS<span>実績</span>
+            </h2>
+            <div>
+              <div className={styles.container}>
+                <ul>
+                  {allPostsData.map(({ id, title, date, image4 }: Props) => (
+                    <li key={id}>
+                      <Link href={`/posts/${id}`}>
+                        <div className={styles.img_inner}>
+                          <div className={styles.img_box}>
+                            <img src={`${image4}`} alt="" />
+                          </div>
+                          <div
+                            className={styles.link_contents}
+                            onMouseEnter={handleMoseEnter} //true
+                            onMouseLeave={handleMoseLeave} //false
+                          >
+                            <p className={textUp ? "" : `${styles.active}`}>
+                              ViewMore
+                            </p>
+                          </div>
+                        </div>
+                        <p>{title}</p>
+                        <p className={styles.small}>{date}</p>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </section>
         <section className={main_styles.cont}>
@@ -114,7 +116,7 @@ const Home: NextPage = ({ allPostsData }: any) => {
             <h2>
               Design<span>デザイン</span>
             </h2>
-            <Slider />
+            <Slider setBtn={numberBtn} />
           </div>
         </section>
         <section className={main_styles.cont}>
@@ -127,4 +129,4 @@ const Home: NextPage = ({ allPostsData }: any) => {
   );
 };
 
-export default Home;
+export default memo(Home);

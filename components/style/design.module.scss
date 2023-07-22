@@ -284,6 +284,26 @@ $pc: 768px;
   }
 }
 
+.banar_more_btn {
+  display: block;
+  color: #143448;
+  border: 1px solid #143448;
+  width: fit-content;
+  padding: 10px 60px;
+  margin: 60px auto 0px;
+  border-radius: 4px;
+  transition: 0.3s ease-in-out;
+  @include mobile {
+    margin: 40px auto 0px;
+  }
+}
+@include pc_screen() {
+  .banar_more_btn:hover {
+    background-color: #143448;
+    color: #fff;
+  }
+}
+
 .swiperSlide {
   width: 100%;
 }

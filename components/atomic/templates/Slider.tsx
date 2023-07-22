@@ -10,13 +10,21 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/navigation"; // スタイルをインポート
 import "swiper/css/pagination"; // スタイルをインポート
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
-const Slider = () => {
+type Props = {
+  setBtn: boolean;
+};
+
+const Slider = (props: Props) => {
+  const { setBtn } = props;
+
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
 
   const swiperSlide = useSwiperSlide();
+
   return (
     <Swiper
       // effect={"creative"}
@@ -118,6 +126,15 @@ const Slider = () => {
         <span></span>
         <span></span>
       </div>
+      {setBtn ? (
+        <>
+          <Link href={"/PageDesign"} className={style_design.banar_more_btn}>
+            View More
+          </Link>
+        </>
+      ) : (
+        <></>
+      )}
     </Swiper>
   );
 };
