@@ -1,30 +1,78 @@
-.business_container {
-  scroll-snap-type: y mandatory;
-  overflow: auto;
-  height: 100vh;
-  .cont {
-    scroll-snap-align: start;
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    p {
-      font-size: 40px;
-      font-weight: bold;
-      color: #fff;
+$mb: 767px;
+$pc: 768px;
+
+@mixin mobile {
+  @media screen and (max-width: $mb) {
+    @content;
+  }
+}
+
+@mixin pc_screen {
+  @media screen and (min-width: $pc) {
+    @content;
+  }
+}
+
+.business * {
+  box-sizing: border-box;
+}
+
+.business {
+  display: block;
+  width: 100%;
+  max-width: 1280px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  @include mobile {
+    width: auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  .wrapper {
+    h3 {
+      border-left: 6px solid #143448;
+      padding-left: 10px;
     }
-    &:first-of-type {
-      background: #0e7fbd;
+    .pr_container {
+      width: 100%;
+      margin-bottom: 80px;
+      @include mobile {
+        margin-bottom: 40px;
+      }
+      .pr_inner {
+        display: flex;
+        justify-content: space-between;
+        @include mobile {
+          display: block;
+        }
+        .pr_contents {
+          border: 1px solid #143448;
+          @include mobile {
+            margin-bottom: 20px;
+          }
+        }
+      }
     }
-    &:nth-of-type(2) {
-      background: #27b75b;
-    }
-    &:nth-of-type(3) {
-      background: #d47d1b;
-    }
-    &:nth-of-type(4) {
-      background: #513cb8;
+    .op_container {
+      width: 100%;
+      margin-bottom: 80px;
+      @include mobile {
+        margin-bottom: 40px;
+      }
+      .op_inner {
+        display: flex;
+        justify-content: space-between;
+        @include mobile {
+          display: block;
+        }
+        .op_contents {
+          border: 1px solid #143448;
+          @include mobile {
+            margin-bottom: 20px;
+          }
+        }
+      }
     }
   }
 }
