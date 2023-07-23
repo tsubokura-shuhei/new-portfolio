@@ -76,6 +76,9 @@ export default function PageDesign() {
         <Slider setBtn={numberBtn} />
       </div>
 
+      <h2>
+        BANNER<span>バナー</span>
+      </h2>
       {/* マテリアルUI追加箇所▼ */}
       <Box className={styles.bnr_container}>
         <Box className={styles.bnr_inner}>
