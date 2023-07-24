@@ -17,9 +17,47 @@ export default function PageBusiness() {
               PRODUCTION <span>制作</span>
             </h3>
             <div className={styles.pr_inner}>
-              <div className={styles.pr_contents}>サイト開発</div>
-              <div className={styles.pr_contents}>LPページ作成</div>
-              <div className={styles.pr_contents}>コミュニティサークル作成</div>
+              <div className={styles.pr_contents}>
+                <Link href="/">
+                  <div className={styles.image_container}>
+                    <img src="images/3825_color.png" alt="" />
+                  </div>
+                  <div className={styles.text_container}>
+                    <div className={styles.title_inner}>サイト開発</div>
+                    <div className={styles.text_inner}>
+                      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                    </div>
+                  </div>
+                </Link>
+              </div>
+              <div className={styles.pr_contents}>
+                <Link href="/">
+                  <div className={styles.image_container}>
+                    <img src="images/3825_color.png" alt="" />
+                  </div>
+                  <div className={styles.text_container}>
+                    <div className={styles.title_inner}>LPページ作成</div>
+                    <div className={styles.text_inner}>
+                      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                    </div>
+                  </div>
+                </Link>
+              </div>
+              <div className={styles.pr_contents}>
+                <Link href="/">
+                  <div className={styles.image_container}>
+                    <img src="images/3825_color.png" alt="" />
+                  </div>
+                  <div className={styles.text_container}>
+                    <div className={styles.title_inner}>
+                      コミュニティサークル作成
+                    </div>
+                    <div className={styles.text_inner}>
+                      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                    </div>
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
           <div className={styles.op_container}>
@@ -27,9 +65,15 @@ export default function PageBusiness() {
               OPERATION <span>運用</span>
             </h3>
             <div className={styles.op_inner}>
-              <div className={styles.op_contents}>サイト更新</div>
-              <div className={styles.op_contents}>おすすめ記事更新</div>
-              <div className={styles.op_contents}>情報誌の作成</div>
+              <div className={styles.op_contents}>
+                <Link href="/">サイト更新</Link>
+              </div>
+              <div className={styles.op_contents}>
+                <Link href="/">おすすめ記事更新</Link>
+              </div>
+              <div className={styles.op_contents}>
+                <Link href="/">情報誌の作成</Link>
+              </div>
             </div>
           </div>
         </div>
