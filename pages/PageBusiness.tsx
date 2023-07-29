@@ -25,9 +25,7 @@ export default function PageBusiness() {
                   </div>
                   <div className={styles.text_container}>
                     <div className={styles.title_inner}>サイト開発</div>
-                    <div className={styles.text_inner}>
-                      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                    </div>
+                    <div className={styles.text_inner}></div>
                   </div>
                 </Link>
               </div>
@@ -74,9 +72,9 @@ export default function PageBusiness() {
                       <img src="images/for.jpg" alt="" />
                     </div>
                     <div className={styles.text_container}>
-                      <div className={styles.title_inner}>サイト開発</div>
+                      <div className={styles.title_inner}>サイト運用更新</div>
                       <div className={styles.text_inner}>
-                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        東武グループや各社コミュニティサイトのWEBサイトの更新対応に携わりました。
                       </div>
                     </div>
                   </Link>
@@ -88,9 +86,9 @@ export default function PageBusiness() {
                       <img src="images/for.jpg" alt="" />
                     </div>
                     <div className={styles.text_container}>
-                      <div className={styles.title_inner}>サイト開発</div>
+                      <div className={styles.title_inner}>おすすめ記事作成</div>
                       <div className={styles.text_inner}>
-                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        東武グループの魅力や情報を発信する新着ニュースの記事を作成させていただきました。
                       </div>
                     </div>
                   </Link>
@@ -102,9 +100,9 @@ export default function PageBusiness() {
                       <img src="images/for.jpg" alt="" />
                     </div>
                     <div className={styles.text_container}>
-                      <div className={styles.title_inner}>サイト開発</div>
+                      <div className={styles.title_inner}>情報誌の作成</div>
                       <div className={styles.text_inner}>
-                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        毎月発行となる情報誌のサイト作成、デザインを担当させていただきました。
                       </div>
                     </div>
                   </Link>
