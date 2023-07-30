@@ -77,21 +77,34 @@ $pc: 768px;
             box-shadow: 0px 0px 60px -41px #777777;
             border-radius: 10px;
             .image_container {
+              display: flex;
+              align-items: center;
               width: 100%;
               padding: 2%;
               margin-bottom: 20px;
               img {
-                width: 100%;
-                height: 100%;
+                width: fit-content;
+                height: auto;
                 object-fit: cover;
-                background-color: antiquewhite;
+              }
+              .title_inner {
+                display: flex;
+                align-items: center;
+                font-size: 20px;
+                h4 {
+                  display: grid;
+                  padding-left: 20px;
+                  span:nth-child(1) {
+                    font-size: 14px;
+                    color: #777777;
+                  }
+                  span:nth-child(2) {
+                    font-size: 18px;
+                  }
+                }
               }
             }
             .text_container {
-              .title_inner {
-                margin-bottom: 10px;
-                font-size: 20px;
-              }
               .text_inner {
                 margin-bottom: 10px;
               }
@@ -134,7 +147,7 @@ $pc: 768px;
         .op_contents {
           display: block;
           width: calc(100% / 3);
-          color: #fff;
+          color: #143448;
           @include mobile {
             width: 100%;
             margin-bottom: 20px;
@@ -149,22 +162,36 @@ $pc: 768px;
             border-radius: 8px;
             box-shadow: 0px 0px 60px -41px #ffffff;
             border-radius: 10px;
+            background-color: #fff;
             .image_container {
+              display: flex;
+              align-items: center;
               width: 100%;
               padding: 2%;
               margin-bottom: 20px;
               img {
-                width: 100%;
-                height: 100%;
+                width: fit-content;
+                height: auto;
                 object-fit: cover;
-                background-color: antiquewhite;
+              }
+              .title_inner {
+                display: flex;
+                align-items: center;
+                font-size: 20px;
+                h4 {
+                  display: grid;
+                  padding-left: 20px;
+                  span:nth-child(1) {
+                    font-size: 14px;
+                    color: #777777;
+                  }
+                  span:nth-child(2) {
+                    font-size: 18px;
+                  }
+                }
               }
             }
             .text_container {
-              .title_inner {
-                margin-bottom: 10px;
-                font-size: 20px;
-              }
               .text_inner {
                 margin-bottom: 10px;
               }

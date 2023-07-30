@@ -21,21 +21,15 @@ export default function PageBusiness() {
                 <Link href="/">
                   <div className={styles.image_container_bg}></div>
                   <div className={styles.image_container}>
-                    <img src="images/for.jpg" alt="" />
+                    <img src="images/icons/image01.png" alt="" />
+                    <div className={styles.title_inner}>
+                      <h4>
+                        <span>project</span>
+                        <span>サイト開発</span>
+                      </h4>
+                    </div>
                   </div>
                   <div className={styles.text_container}>
-                    <div className={styles.title_inner}>サイト開発</div>
-                    <div className={styles.text_inner}></div>
-                  </div>
-                </Link>
-              </div>
-              <div className={styles.pr_contents}>
-                <Link href="/">
-                  <div className={styles.image_container}>
-                    <img src="images/for.jpg" alt="" />
-                  </div>
-                  <div className={styles.text_container}>
-                    <div className={styles.title_inner}>LPページ作成</div>
                     <div className={styles.text_inner}>
                       テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
                     </div>
@@ -45,12 +39,33 @@ export default function PageBusiness() {
               <div className={styles.pr_contents}>
                 <Link href="/">
                   <div className={styles.image_container}>
-                    <img src="images/for.jpg" alt="" />
+                    <img src="images/icons/image02.png" alt="" />
+                    <div className={styles.title_inner}>
+                      <h4>
+                        <span>project</span>
+                        <span>LPページ作成</span>
+                      </h4>
+                    </div>
                   </div>
                   <div className={styles.text_container}>
-                    <div className={styles.title_inner}>
-                      コミュニティサークル作成
+                    <div className={styles.text_inner}>
+                      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
                     </div>
+                  </div>
+                </Link>
+              </div>
+              <div className={styles.pr_contents}>
+                <Link href="/">
+                  <div className={styles.image_container}>
+                    <img src="images/icons/image03.png" alt="" />
+                    <div className={styles.title_inner}>
+                      <h4>
+                        <span>project</span>
+                        <span>コミュニティサークル作成</span>
+                      </h4>
+                    </div>
+                  </div>
+                  <div className={styles.text_container}>
                     <div className={styles.text_inner}>
                       テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
                     </div>
@@ -69,10 +84,15 @@ export default function PageBusiness() {
                   <Link href="/">
                     <div className={styles.image_container_bg}></div>
                     <div className={styles.image_container}>
-                      <img src="images/for.jpg" alt="" />
+                      <img src="images/icons/image04.png" alt="" />
+                      <div className={styles.title_inner}>
+                        <h4>
+                          <span>project</span>
+                          <span>サイト運用更新</span>
+                        </h4>
+                      </div>
                     </div>
                     <div className={styles.text_container}>
-                      <div className={styles.title_inner}>サイト運用更新</div>
                       <div className={styles.text_inner}>
                         東武グループや各社コミュニティサイトのWEBサイトの更新対応に携わりました。
                       </div>
@@ -83,10 +103,15 @@ export default function PageBusiness() {
                   <Link href="/">
                     <div className={styles.image_container_bg}></div>
                     <div className={styles.image_container}>
-                      <img src="images/for.jpg" alt="" />
+                      <img src="images/icons/image05.png" alt="" />
+                      <div className={styles.title_inner}>
+                        <h4>
+                          <span>project</span>
+                          <span>おすすめ記事作成</span>
+                        </h4>
+                      </div>
                     </div>
                     <div className={styles.text_container}>
-                      <div className={styles.title_inner}>おすすめ記事作成</div>
                       <div className={styles.text_inner}>
                         東武グループの魅力や情報を発信する新着ニュースの記事を作成させていただきました。
                       </div>
@@ -97,10 +122,15 @@ export default function PageBusiness() {
                   <Link href="/">
                     <div className={styles.image_container_bg}></div>
                     <div className={styles.image_container}>
-                      <img src="images/for.jpg" alt="" />
+                      <img src="images/icons/image06.png" alt="" />
+                      <div className={styles.title_inner}>
+                        <h4>
+                          <span>project</span>
+                          <span>情報誌の作成</span>
+                        </h4>
+                      </div>
                     </div>
                     <div className={styles.text_container}>
-                      <div className={styles.title_inner}>情報誌の作成</div>
                       <div className={styles.text_inner}>
                         毎月発行となる情報誌のサイト作成、デザインを担当させていただきました。
                       </div>
