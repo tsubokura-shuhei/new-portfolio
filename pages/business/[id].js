@@ -1,8 +1,17 @@
-import { Layout } from "../../components/Layout";
-import { getPostsData2 } from "../../lib/post";
+import { Layout } from "../../components/Layout.tsx";
+import { getAllPostIds2, getPostData2 } from "../../lib/post.js";
+
+export async function getStaticPaths() {
+  const paths = getAllPostIds2();
+
+  return {
+    paths,
+    fallback: false,
+  };
+}
 
 export async function getStaticProps({ params }) {
-  const postData = await getPostsData2(params.id);
+  const postData = await getPostData2(params.id);
 
   return {
     props: {
@@ -12,7 +21,6 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Post({ postData }) {
-  console.log(postData);
   return (
     <>
       <Layout>

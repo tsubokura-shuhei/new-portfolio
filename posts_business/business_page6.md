@@ -1,5 +1,5 @@
 ---
-title: "サイト開発"
+title: "情報誌の作成"
 date: "2020-02-21"
 thumbnail: "/images/work/page04/image01.png"
 text: "SCOPE：Design / HTML,CSS,JavaScript /"

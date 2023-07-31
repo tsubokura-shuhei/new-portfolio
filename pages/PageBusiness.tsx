@@ -18,7 +18,7 @@ export default function PageBusiness() {
             </h3>
             <div className={styles.pr_inner}>
               <div className={styles.pr_contents}>
-                <Link href="/">
+                <Link href={`/business/business_page1`}>
                   <div className={styles.image_container_bg}></div>
                   <div className={styles.image_container}>
                     <img src="images/icons/image01.png" alt="" />
@@ -37,7 +37,7 @@ export default function PageBusiness() {
                 </Link>
               </div>
               <div className={styles.pr_contents}>
-                <Link href="/">
+                <Link href={`/business/business_page2`}>
                   <div className={styles.image_container}>
                     <img src="images/icons/image02.png" alt="" />
                     <div className={styles.title_inner}>
@@ -55,7 +55,7 @@ export default function PageBusiness() {
                 </Link>
               </div>
               <div className={styles.pr_contents}>
-                <Link href="/">
+                <Link href={`/business/business_page3`}>
                   <div className={styles.image_container}>
                     <img src="images/icons/image03.png" alt="" />
                     <div className={styles.title_inner}>
@@ -81,7 +81,7 @@ export default function PageBusiness() {
               </h3>
               <div className={styles.op_inner}>
                 <div className={styles.op_contents}>
-                  <Link href="/">
+                  <Link href={`/business/business_page4`}>
                     <div className={styles.image_container_bg}></div>
                     <div className={styles.image_container}>
                       <img src="images/icons/image04.png" alt="" />
@@ -100,7 +100,7 @@ export default function PageBusiness() {
                   </Link>
                 </div>
                 <div className={styles.op_contents}>
-                  <Link href="/">
+                  <Link href={`/business/business_page5`}>
                     <div className={styles.image_container_bg}></div>
                     <div className={styles.image_container}>
                       <img src="images/icons/image05.png" alt="" />
@@ -119,7 +119,7 @@ export default function PageBusiness() {
                   </Link>
                 </div>
                 <div className={styles.op_contents}>
-                  <Link href="/">
+                  <Link href={`/business/business_page6`}>
                     <div className={styles.image_container_bg}></div>
                     <div className={styles.image_container}>
                       <img src="images/icons/image06.png" alt="" />

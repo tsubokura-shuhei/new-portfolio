@@ -45,7 +45,7 @@ $pc: 768px;
       width: 100%;
       max-width: 1280px;
       margin-top: 30px;
-
+      padding: 0 40px;
       @include mobile {
         max-width: auto;
         width: 100%;
@@ -131,6 +131,7 @@ $pc: 768px;
       max-width: 1280px;
       color: #fff;
       margin-top: 30px;
+      padding: 0 40px;
       @include mobile {
         max-width: auto;
         width: 100%;
