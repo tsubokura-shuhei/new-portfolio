@@ -1,6 +1,7 @@
 $mb: 767px;
+$tb: 1000px;
 
-$title_font_pc: 14vh;
+$title_font_pc: 12vh;
 $title_font_sp: 15vw;
 
 @mixin mobile {
@@ -11,8 +12,8 @@ $title_font_sp: 15vw;
 
 h1.main_title {
   position: absolute;
-  top: 12vh;
-  left: 12vw;
+  top: 20vh;
+  left: 13vw;
   @include mobile {
     width: 80%;
     position: absolute;

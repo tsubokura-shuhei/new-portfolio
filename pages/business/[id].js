@@ -24,7 +24,11 @@ export default function Post({ postData }) {
   return (
     <>
       <Layout>
-        <div>{postData.title}</div>
+        <div>
+          <h3>{postData.title}</h3>
+          <img src={postData.image1} alt="" />
+        </div>
+        <div></div>
       </Layout>
     </>
   );

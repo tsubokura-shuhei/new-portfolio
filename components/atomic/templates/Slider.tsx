@@ -5,7 +5,8 @@ import { useSwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Autoplay, Navigation } from "swiper";
 
 import "swiper/css";
-import "swiper/css/effect-coverflow";
+// import "swiper/css/effect-coverflow";
+import "swiper/css/effect-creative";
 
 import "swiper/css/navigation"; // スタイルをインポート
 import "swiper/css/pagination"; // スタイルをインポート
@@ -17,29 +18,58 @@ type Props = {
   setBtn: boolean;
 };
 
+import SwiperCore, { EffectCreative } from "swiper";
+
 const Slider = (props: Props) => {
   const { setBtn } = props;
+
+  SwiperCore.use([EffectCreative]);
 
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
 
-  const swiperSlide = useSwiperSlide();
+  const swiperSlide = useEffect;
 
   return (
     <Swiper
-      // effect={"creative"}
-      grabCursor={true}
       loop={true}
-      centeredSlides={true}
-      slidesPerView={1}
-      speed={2000}
       autoplay={{
         delay: 10000,
         disableOnInteraction: false,
       }}
-      navigation={{ prevEl: "#button_prev", nextEl: "#button_next" }}
       pagination={{ el: "#swiper_pagination_btn ", clickable: true }}
-      modules={[EffectCoverflow, Pagination, Autoplay, Navigation]}
+      navigation={{ prevEl: "#button_prev", nextEl: "#button_next" }}
+      centeredSlides={true}
+      effect={"creative"}
+      creativeEffect={{
+        limitProgress: 1,
+        prev: {
+          translate: ["100%", -100, -900],
+          rotate: [0, 0, 0],
+          // shadow: true,
+        },
+        next: {
+          translate: ["-100%", -100, -900],
+          rotate: [0, 0, 0],
+          // shadow: true,
+        },
+      }}
+      breakpoints={{
+        0: {
+          slidesPerView: 1.1, //スライドを2枚表示
+        },
+        // 599px以上の場合
+        599: {
+          slidesPerView: 2, //スライドを2枚表示
+        },
+        // 1024px以上の場合
+        1024: {
+          slidesPerView: 2, //スライドを3枚表示
+        },
+      }}
+      grabCursor={true}
+      speed={2000}
+      modules={[Pagination, Autoplay, Navigation]}
       className={style_design.image_container}
     >
       <SwiperSlide className={style_design.swiperSlide}>
@@ -51,8 +81,12 @@ const Slider = (props: Props) => {
                 isActive ? `${style_design.active}` : ""
               }`}
             >
-              <p>テキスト</p>
-              <p className={style_design.small}>テキストテキストテキストテ</p>
+              <p>
+                通勤もお出かけもとーってもお得！
+                <br />
+                東武線の特急券が50%OFFキャンペーン
+              </p>
+              <p className={style_design.small}>キャンペーンバナー</p>
             </div>
           </>
         )}
@@ -66,10 +100,12 @@ const Slider = (props: Props) => {
                 isActive ? `${style_design.active}` : ""
               }`}
             >
-              <p>テキスト</p>
-              <p className={style_design.small}>
-                テキストテキストテキストテキストテキスト
+              <p>
+                2020Winter 東武鉄道で行こう！
+                <br />
+                冬のイルミネーション特集
               </p>
+              <p className={style_design.small}>イベントバナー</p>
             </div>
           </>
         )}
@@ -83,8 +119,12 @@ const Slider = (props: Props) => {
                 isActive ? `${style_design.active}` : ""
               }`}
             >
-              <p>テキスト</p>
-              <p className={style_design.small}>テキストテキストテキ</p>
+              <p>
+                栃木県民限定！
+                <br />
+                割引キャンペーン
+              </p>
+              <p className={style_design.small}>キャンペーンバナー</p>
             </div>
           </>
         )}
@@ -92,16 +132,37 @@ const Slider = (props: Props) => {
       <SwiperSlide className={style_design.swiperSlide}>
         {({ isActive }) => (
           <>
-            <img src="/images/design/image11.jpg" alt="" />
+            <img src="/images/design/image26.jpg" alt="" />
             <div
               className={`${style_design.swiperSlide} ${
                 isActive ? `${style_design.active}` : ""
               }`}
             >
-              <p>テキスト</p>
-              <p className={style_design.small}>
-                テキストテキストテキストテキストテキストテキストテキストテキス
+              <p>
+                あしかがフラワーパーク
+                <br />
+                イルミネーションきっぷ
               </p>
+              <p className={style_design.small}>キャンペーンバナー</p>
+            </div>
+          </>
+        )}
+      </SwiperSlide>
+      <SwiperSlide className={style_design.swiperSlide}>
+        {({ isActive }) => (
+          <>
+            <img src="/images/design/image20.png" alt="" />
+            <div
+              className={`${style_design.swiperSlide} ${
+                isActive ? `${style_design.active}` : ""
+              }`}
+            >
+              <p>
+                あしかがフラワーパーク
+                <br />
+                イルミネーションきっぷ
+              </p>
+              <p className={style_design.small}>キャンペーンバナー</p>
             </div>
           </>
         )}
@@ -121,6 +182,7 @@ const Slider = (props: Props) => {
         id="swiper_pagination_btn"
         className={style_design.swiper_pagination}
       >
+        <span></span>
         <span></span>
         <span></span>
         <span></span>

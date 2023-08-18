@@ -1,0 +1,117 @@
+//制作
+
+.production {
+  display: block;
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 100%;
+  margin-bottom: 80px;
+  .website {
+    .website_container {
+      display: flex;
+      margin: 30px 0px;
+      padding: 0px 40px;
+      .left_container {
+        display: block;
+        justify-content: center;
+        width: 50%;
+        img {
+          width: 100%;
+          height: fit-content;
+        }
+      }
+      .right_container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        height: fit-content;
+        img {
+          width: calc(100% / 3);
+        }
+        .open_btn {
+          position: absolute;
+          top: -32px;
+          right: calc(100% / 3 - 28px);
+          .btn {
+            display: block;
+            width: 40px;
+            height: 40px;
+            border-radius: 9999px;
+            background-color: #bebebe;
+          }
+          .btn::before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 12px;
+            border-top: 2px solid #fff;
+            transform: rotate(-90deg);
+            position: absolute;
+            top: 20px;
+            left: 12px;
+            right: 0;
+            margin: 0 auto;
+            transition: 0.3s;
+          }
+          .btn::after {
+            content: "";
+            display: inline-block;
+            width: 18px;
+            height: 12px;
+            border-top: 2px solid #fff;
+            -webkit-transform: rotate(-0deg);
+            transform: rotate(-0deg);
+            position: absolute;
+            top: 26px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+          }
+        }
+        .open_btn:hover {
+          opacity: 0.8;
+          background: none;
+        }
+      }
+    }
+  }
+}
+.modal_container {
+  .modal_image {
+    width: 90%;
+    height: 90%;
+    overflow-y: scroll;
+    img {
+      width: 100%;
+    }
+  }
+  .close_btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 10px;
+    padding: 10px;
+  }
+}
+
+//運用
+.operation {
+  display: block;
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+//その他
+
+.others {
+  display: block;
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 100%;
+  margin-bottom: 80px;
+}

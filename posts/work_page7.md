@@ -1,6 +1,6 @@
 ---
 title: "OPERA(オペラ)"
-date: "2022-02-22"
+date: "美容サイト"
 thumbnail: "/images/work/page08/image01.png"
 text: "SCOPE：Design / HTML,CSS,JavaScript /"
 # text2: ""

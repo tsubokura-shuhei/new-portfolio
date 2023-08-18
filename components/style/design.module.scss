@@ -159,6 +159,7 @@ $pc: 768px;
 }
 
 .design_image_container {
+  position: relative;
   img {
     width: 100%;
     max-width: fit-content;
@@ -213,7 +214,6 @@ $pc: 768px;
 //メインスライダー
 .image_container {
   width: 100%;
-  max-width: 895px;
   @include mobile {
     width: 100%;
   }
@@ -224,22 +224,36 @@ $pc: 768px;
     color: red;
   }
   img {
+    display: block;
     width: 100%;
+    margin: 0 auto;
     padding: 0 20px;
+    @include mobile {
+      width: 100%;
+    }
   }
   .container_btn {
+    bottom: 0px;
     display: flex;
     justify-content: space-between;
-    margin: 0 20px;
     margin-top: 6px;
     margin-bottom: 6px;
+    z-index: 1;
+    left: 0px;
+    padding: 0px 20px;
+    width: 750px;
+    margin: auto;
+    @include mobile {
+      width: 100%;
+      bottom: 0px;
+    }
     .slider_btn {
       display: flex;
       position: relative;
       background-color: #143448;
       width: 40px;
       height: 40px;
-      border-radius: 4px;
+      border-radius: 9999px;
       cursor: pointer;
     }
     .slider_btn.btn_prev::before {
@@ -310,14 +324,18 @@ $pc: 768px;
 .swiperSlide p {
   display: flex;
   bottom: 47px;
-  padding: 10px 20px;
+  padding: 20px 20px;
   justify-content: center;
   padding-bottom: 0px;
-  font-size: 26px;
+  font-size: 20px;
   font-weight: bold;
+  text-align: center;
   opacity: 0;
+  transition: 2s ease-in-out;
+  transform: translateY(-20px);
+  font-size: 18px;
   @include mobile {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
@@ -327,55 +345,62 @@ $pc: 768px;
   bottom: 0px;
   padding: 0px 20px;
   @include mobile {
-    font-size: 16px !important;
+    font-size: 14px !important;
   }
 }
 
 .swiperSlide.active p {
-  animation-name: sample-animation1;
-  animation-duration: 10s;
-  animation-iteration-count: 1;
+  // animation-name: sample-animation1;
+  // animation-duration: 10s;
+  // animation-iteration-count: 1;
+  text-align: center;
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 .swiperSlide p.small {
   font-size: 18px;
 }
+.swiperSlide p.small {
+  font-size: 14px;
+  color: #999999;
+}
 .swiperSlide.active p.small {
-  font-size: 18px;
+  font-size: 14px;
 }
 
-@keyframes sample-animation1 {
-  0% {
-    opacity: 0;
-    user-select: none;
-    transform: translateY(30px);
-  }
-  20% {
-    opacity: 0;
-    user-select: none;
-    transform: translateY(30px);
-  }
-  30% {
-    opacity: 1;
-    user-select: auto;
-    transform: translateY(0px);
-  }
-  50% {
-    opacity: 1;
-    user-select: auto;
-    transform: translateY(0px);
-  }
-  90% {
-    opacity: 1;
-    user-select: auto;
-    transform: translateY(0px);
-  }
-  100% {
-    opacity: 0;
-    user-select: none;
-    transform: translateY(30px);
-  }
-}
+// @keyframes sample-animation1 {
+//   0% {
+//     opacity: 0;
+//     user-select: none;
+//     transform: translateY(30px);
+//   }
+//   20% {
+//     opacity: 0;
+//     user-select: none;
+//     transform: translateY(30px);
+//   }
+//   30% {
+//     opacity: 1;
+//     user-select: auto;
+//     transform: translateY(0px);
+//   }
+//   50% {
+//     opacity: 1;
+//     user-select: auto;
+//     transform: translateY(0px);
+//   }
+//   90% {
+//     opacity: 1;
+//     user-select: auto;
+//     transform: translateY(0px);
+//   }
+//   100% {
+//     opacity: 0;
+//     user-select: none;
+//     transform: translateY(30px);
+//   }
+// }
 
 .swiper_pagination {
   margin: 0 auto !important;

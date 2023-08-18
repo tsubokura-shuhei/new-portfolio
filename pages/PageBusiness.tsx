@@ -12,7 +12,71 @@ export default function PageBusiness() {
           BUSINESS<span>ビジネス</span>
         </h2>
         <div className={styles.wrapper}>
-          <div className={styles.pr_container}>
+          <div className={styles.op_container_bg}>
+            <div className={styles.op_container}>
+              <div className={styles.op_inner}>
+                <div className={styles.op_contents}>
+                  <Link href={`/business_page/Production`}>
+                    <div className={styles.image_container_bg}></div>
+                    <div className={styles.image_container}>
+                      <img src="images/icons/image01.png" alt="" />
+                      <div className={styles.title_inner}>
+                        <h4>
+                          <span>PRODUCTION</span>
+                          <span>WEBサイト制作</span>
+                        </h4>
+                      </div>
+                    </div>
+                    <div className={styles.text_container}>
+                      <div className={styles.text_inner}>
+                        東武グループや各社コミュニティサイトのWEBサイトの制作に携わりました。
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+                <div className={styles.op_contents}>
+                  <Link href={`/business_page/operation`}>
+                    <div className={styles.image_container_bg}></div>
+                    <div className={styles.image_container}>
+                      <img src="images/icons/image04.png" alt="" />
+                      <div className={styles.title_inner}>
+                        <h4>
+                          <span>OPERATION</span>
+                          <span>WEBサイト運用</span>
+                        </h4>
+                      </div>
+                    </div>
+                    <div className={styles.text_container}>
+                      <div className={styles.text_inner}>
+                        数百社の各企業さまのWEBサイトの更新対応、修正対応に携わりました。
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+                <div className={styles.op_contents}>
+                  <Link href={`/business_page/others`}>
+                    <div className={styles.image_container_bg}></div>
+                    <div className={styles.image_container}>
+                      <img src="images/icons/image02.png" alt="" />
+                      <div className={styles.title_inner}>
+                        <h4>
+                          <span>OTHERS</span>
+                          <span>その他の制作</span>
+                        </h4>
+                      </div>
+                    </div>
+                    <div className={styles.text_container}>
+                      <div className={styles.text_inner}>
+                        情報誌のサイト作成、新着ニュースの記事制作、デザインを担当させていただきました。
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* <div className={styles.pr_container}>
             <h3>
               PRODUCTION <span>制作</span>
             </h3>
@@ -25,14 +89,12 @@ export default function PageBusiness() {
                     <div className={styles.title_inner}>
                       <h4>
                         <span>project</span>
-                        <span>サイト開発</span>
+                        <span>WEBサイト開発</span>
                       </h4>
                     </div>
                   </div>
                   <div className={styles.text_container}>
-                    <div className={styles.text_inner}>
-                      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                    </div>
+                    <div className={styles.text_inner}></div>
                   </div>
                 </Link>
               </div>
@@ -73,8 +135,8 @@ export default function PageBusiness() {
                 </Link>
               </div>
             </div>
-          </div>
-          <div className={styles.op_container_bg}>
+          </div> */}
+          {/* <div className={styles.op_container_bg}>
             <div className={styles.op_container}>
               <h3 className={styles.op}>
                 OPERATION <span>運用</span>
@@ -139,7 +201,7 @@ export default function PageBusiness() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </Layout>

@@ -32,7 +32,7 @@ $pc: 768px;
     &:first-of-type {
     }
     &:nth-of-type(2) {
-      background-color: #143448;
+      background: linear-gradient(-45deg, #102050, #203080);
       color: #fff;
       padding: 80px 0px;
       @include mobile {

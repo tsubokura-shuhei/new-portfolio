@@ -1,25 +1,18 @@
-import Head from "next/head";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Box, Button, Modal, Typography } from "@mui/material";
 import { imageFile } from "../lib/imageFile";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import styles from "../components/style/design.module.scss";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import Header from "../components/atomic/templates/ToggleBtn";
 import { Layout } from "../components/Layout";
 import Slider from "../components/atomic/templates/Slider";
 
 export default function PageDesign() {
   const [moduleOpen, setModuleOpen] = useState(false);
-  const [namelist, setNameList] = useState(false);
   const ModuleLoading = () => {
     setModuleOpen((prevState) => !prevState);
   };

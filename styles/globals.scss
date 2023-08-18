@@ -76,14 +76,14 @@ h2 {
   text-align: center;
   margin: 0px auto;
   padding: 30px 0;
-  font-size: 34px;
+  font-size: 44px;
   span {
-    font-size: 18px;
+    font-size: 20px;
   }
   @include mobile {
-    font-size: 28px;
+    font-size: 32px;
     span {
-      font-size: 14px;
+      font-size: 18px;
     }
   }
 }

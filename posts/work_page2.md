@@ -1,6 +1,6 @@
 ---
 title: "東武アーバンパークライン"
-date: "2022-02-22"
+date: "東武鉄道"
 thumbnail: "/images/work/page07/image01.png"
 text: "SCOPE：Design / HTML,CSS,JavaScript /"
 text2: "東武アーバンパークラインのイメージカラーである、黄緑色と青色のラインを使用したWEBサイトに仕上げています。イラストや文字にモーションを取り入れることで関心を高めアーバンパークラインに興味を持っていただけるように仕上げました。"
