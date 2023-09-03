@@ -67,6 +67,7 @@ export default function Production() {
                     id="modal-modal-title"
                     variant="h6"
                     component="h2"
+                    style={{ width: "100%" }}
                   >
                     <img src="/images/business/production/top.png" alt="" />
                   </Typography>
