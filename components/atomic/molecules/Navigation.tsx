@@ -22,9 +22,9 @@ const Navigation = (props: Props) => {
           <li className={styles.list_2}>
             <Link href="/PageWork">WORK</Link>
           </li>
-          <li className={styles.list_3}>
+          {/* <li className={styles.list_3}>
             <Link href="/PageBusiness">BUSINESS</Link>
-          </li>
+          </li> */}
           <li className={styles.list_4}>
             <Link href="/PageDesign">DESIGN</Link>
           </li>

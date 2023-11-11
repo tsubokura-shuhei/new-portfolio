@@ -151,17 +151,13 @@ const Slider = (props: Props) => {
       <SwiperSlide className={style_design.swiperSlide}>
         {({ isActive }) => (
           <>
-            <img src="/images/design/image20.png" alt="" />
+            <img src="/images/design/image3.jpg" alt="" />
             <div
               className={`${style_design.swiperSlide} ${
                 isActive ? `${style_design.active}` : ""
               }`}
             >
-              <p>
-                あしかがフラワーパーク
-                <br />
-                イルミネーションきっぷ
-              </p>
+              <p>川越春暖簾</p>
               <p className={style_design.small}>キャンペーンバナー</p>
             </div>
           </>

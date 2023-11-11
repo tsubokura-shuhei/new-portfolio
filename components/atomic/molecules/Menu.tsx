@@ -12,9 +12,9 @@ export const Menu = () => {
           <li>
             <Link href="/PageWork">WORK</Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/PageBusiness">BUSINESS</Link>
-          </li>
+          </li> */}
           <li>
             <Link href="/PageDesign">DESIGN</Link>
           </li>
