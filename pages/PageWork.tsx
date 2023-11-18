@@ -32,6 +32,7 @@ export async function getStaticProps() {
 
 const PageWork: NextPage = ({ allPostsData }: any) => {
   const [textUp, setTextUp] = useState(false);
+
   return (
     <Layout title="Works">
       <div className={`${styles.work_main} ${styles.work_page}`}>
@@ -42,7 +43,27 @@ const PageWork: NextPage = ({ allPostsData }: any) => {
           <div className={styles.container}>
             <ul>
               {allPostsData.map(({ id, title, date, image4 }: Props) => (
-                <li key={id}>
+                <motion.li
+                  key={id}
+                  variants={{
+                    offscreen: {
+                      // 画面外の場合のスタイル
+                      y: 50,
+                      opacity: 0,
+                    },
+                    onscreen: {
+                      // 画面内の場合のスタイル
+                      y: 0,
+                      opacity: 1,
+                      transition: {
+                        duration: 1,
+                      },
+                    },
+                  }}
+                  initial="offscreen" // 初期表示はoffscreen
+                  whileInView="onscreen" // 画面内に入ったらonscreen
+                  viewport={{ once: true, amount: 0 }}
+                >
                   <Link
                     href={`/posts/${id}`}
                     style={{ animationDuration: "2s" }}
@@ -64,7 +85,7 @@ const PageWork: NextPage = ({ allPostsData }: any) => {
                     <p>{title}</p>
                     <p className={styles.small}>{date}</p>
                   </Link>
-                </li>
+                </motion.li>
               ))}
             </ul>
           </div>

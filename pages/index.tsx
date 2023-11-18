@@ -3,6 +3,7 @@ import Link from "next/link";
 import main_styles from "../components/style/main.module.scss";
 import styles from "../components/style/work.module.scss";
 import { Main } from "../components/Main";
+import { motion } from "framer-motion";
 
 import { getPostsData } from "../lib/post";
 import Profile from "../components/atomic/templates/Profile";
@@ -85,7 +86,27 @@ const Home: NextPage = ({ allPostsData }: any) => {
               <div className={styles.container}>
                 <ul>
                   {allPostsData.map(({ id, title, date, image4 }: Props) => (
-                    <li key={id}>
+                    <motion.li
+                      key={id}
+                      variants={{
+                        offscreen: {
+                          // 画面外の場合のスタイル
+                          y: 50,
+                          opacity: 0,
+                        },
+                        onscreen: {
+                          // 画面内の場合のスタイル
+                          y: 0,
+                          opacity: 1,
+                          transition: {
+                            duration: 1,
+                          },
+                        },
+                      }}
+                      initial="offscreen" // 初期表示はoffscreen
+                      whileInView="onscreen" // 画面内に入ったらonscreen
+                      viewport={{ once: true, amount: 0 }}
+                    >
                       <Link href={`/posts/${id}`}>
                         <div className={styles.img_inner}>
                           <div className={styles.img_box}>
@@ -104,7 +125,7 @@ const Home: NextPage = ({ allPostsData }: any) => {
                         <p>{title}</p>
                         <p className={styles.small}>{date}</p>
                       </Link>
-                    </li>
+                    </motion.li>
                   ))}
                 </ul>
               </div>
