@@ -8,6 +8,7 @@ import { getPostsData } from "../lib/post";
 import Header from "../components/atomic/templates/ToggleBtn";
 import { Layout } from "../components/Layout";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export type Props = {
   id: number | undefined;
@@ -37,31 +38,36 @@ const PageWork: NextPage = ({ allPostsData }: any) => {
         <h2>
           WORKS<span>実績</span>
         </h2>
-        <div className={styles.container}>
-          <ul>
-            {allPostsData.map(({ id, title, date, image4 }: Props) => (
-              <li key={id}>
-                <Link href={`/posts/${id}`} style={{ animationDuration: "2s" }}>
-                  <div className={styles.img_inner}>
-                    <div className={styles.img_box}>
-                      <img src={`${image4}`} alt="" />
+        <div className={styles.bg_container}>
+          <div className={styles.container}>
+            <ul>
+              {allPostsData.map(({ id, title, date, image4 }: Props) => (
+                <li key={id}>
+                  <Link
+                    href={`/posts/${id}`}
+                    style={{ animationDuration: "2s" }}
+                  >
+                    <div className={styles.img_inner}>
+                      <div className={styles.img_box}>
+                        <img src={`${image4}`} alt="" />
+                      </div>
+                      <div
+                        className={styles.link_contents}
+                        onMouseEnter={() => setTextUp(true)}
+                        onMouseLeave={() => setTextUp(false)}
+                      >
+                        <p className={textUp ? "" : `${styles.active}`}>
+                          ViewMore
+                        </p>
+                      </div>
                     </div>
-                    <div
-                      className={styles.link_contents}
-                      onMouseEnter={() => setTextUp(true)}
-                      onMouseLeave={() => setTextUp(false)}
-                    >
-                      <p className={textUp ? "" : `${styles.active}`}>
-                        ViewMore
-                      </p>
-                    </div>
-                  </div>
-                  <p>{title}</p>
-                  <p className={styles.small}>{date}</p>
-                </Link>
-              </li>
-            ))}
-          </ul>
+                    <p>{title}</p>
+                    <p className={styles.small}>{date}</p>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </Layout>
