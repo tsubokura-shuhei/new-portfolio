@@ -133,7 +133,7 @@ const Home: NextPage = ({ allPostsData }: any) => {
           </div>
         </section>
         <section className={main_styles.cont}>
-          <div>
+          <div style={{ maxWidth: "1280px", margin: "0px auto" }}>
             <h2>
               Design<span>デザイン</span>
             </h2>
